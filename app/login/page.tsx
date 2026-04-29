@@ -41,7 +41,7 @@ export default function LoginPage() {
             try {
                 const decodedToken = jwtDecode<TokenPayload>(data.access_token);
                 // ดึง Role ออกมา (หรือถ้า Backend ใส่ role ไว้ใน data.user ด้วย ก็สามารถใช้ fallback ได้)
-                const userRole = decodedToken.role || data.user?.role; 
+                const userRole = (decodedToken.role || data.user?.role || "").toLowerCase();
 
                 // 🌟 2. ทำ Role-Based Routing ส่งไปหน้าที่เตรียมไว้ 5 roles
                 switch (userRole) {
