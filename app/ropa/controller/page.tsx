@@ -15,7 +15,6 @@ export interface RopaData {
   request_type?: string; 
   activity_name?: string;
   purpose?: string;
-  data_subject_category?: string;
   data_subject?: string;
   collected_personal_data?: string;
   collected_data?: string;
@@ -177,7 +176,7 @@ export default function RoPARecordPage() {
   const [formData, setFormData] = useState<RopaData>({
     record_type: "Controller", request_type: "สร้างรายการใหม่",
     controller_info: "", processor_name: "", controller_address: "",
-    activity_name: "", purpose: "", collected_personal_data: "", data_subject_category: "",
+    activity_name: "", purpose: "", collected_personal_data: "", data_subject: "",
     data_type: "", collection_format: "", is_direct_from_subject: "true", is_direct_from_controller: "true", indirect_source_detail: "", legal_basis: "",
     minor_under_10: "", minor_10_to_20: "", cb_is_transferred: "false", cb_is_intra_group: "false", cb_transfer_method: "",
     cb_destination_standard: "", cb_section_28_exception: "", rp_storage_format: "", rp_storage_method: "", rp_retention_period: "",
@@ -436,7 +435,7 @@ export default function RoPARecordPage() {
         record_type: currentMenu, 
         request_type: "สร้างรายการใหม่",
         controller_info: "", processor_name: "", controller_address: "",
-        activity_name: "", purpose: "", collected_personal_data: "", data_subject_category: "",
+        activity_name: "", purpose: "", collected_personal_data: "", data_subject: "",
         data_type: "", collection_format: "", is_direct_from_subject: "true", is_direct_from_controller: "true", indirect_source_detail: "", legal_basis: "",
         minor_under_10: "", minor_10_to_20: "", cb_is_transferred: "false", cb_is_intra_group: "false", cb_transfer_method: "",
         cb_destination_standard: "", cb_section_28_exception: "", rp_storage_format: "", rp_storage_method: "", rp_retention_period: "",
@@ -456,7 +455,7 @@ export default function RoPARecordPage() {
     let payload = { 
       ...formData,
       record_type: currentMenu,
-      data_subject: formData.data_subject_category,
+      data_subject: formData.data_subject,
       created_by: currentUser.name,
       recorder_email: currentUser.email,
       recorder_phone: currentUser.phone || "-",
@@ -806,7 +805,7 @@ export default function RoPARecordPage() {
                       <td className="px-2 py-2 overflow-hidden">
                         <div className="truncate w-full">
                           <div className="font-semibold text-slate-800 truncate" title={record.activity_name}>{record.activity_name}</div>
-                          <div className="text-[10px] text-slate-500 truncate mt-0.5" title={record.data_subject_category || record.data_subject}>หมวดหมู่: {record.data_subject_category || record.data_subject}</div>
+                          <div className="text-[10px] text-slate-500 truncate mt-0.5" title={record.data_subject || record.data_subject}>หมวดหมู่: {record.data_subject || record.data_subject}</div>
                         </div>
                       </td>
                       <td className="px-2 py-2 truncate" title={record.purpose}>{record.purpose}</td>
@@ -994,7 +993,7 @@ export default function RoPARecordPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
                   <div>
                     <p className="text-slate-400 font-medium text-[10px] mb-0.5">หมวดหมู่เจ้าของข้อมูล</p>
-                    <p className="text-slate-800 font-medium">{selectedRecord.data_subject_category || selectedRecord.data_subject || "-"}</p>
+                    <p className="text-slate-800 font-medium">{selectedRecord.data_subject || selectedRecord.data_subject || "-"}</p>
                   </div>
                   <div>
                     <p className="text-slate-400 font-medium text-[10px] mb-0.5">ประเภทของข้อมูล</p>
@@ -1256,8 +1255,8 @@ export default function RoPARecordPage() {
                         <input id="collected_personal_data" aria-label="ข้อมูลส่วนบุคคลที่จัดเก็บ" title="ข้อมูลที่จัดเก็บ" type="text" value={formData.collected_personal_data} onChange={(e) => setFormData({ ...formData, collected_personal_data: e.target.value })} className="w-full px-2 py-1.5 border border-slate-300 rounded focus:ring-1 focus:ring-blue-500 outline-none text-black" placeholder="เช่น ชื่อ, นามสกุล, เบอร์โทร..." />
                       </div>
                       <div>
-                        <label htmlFor="data_subject_category" className="block font-bold text-slate-700 mb-1">{currentMenu === "Controller" ? "5" : "6"}. หมวดหมู่ของข้อมูล (Data Subject)</label>
-                        <input id="data_subject_category" aria-label="หมวดหมู่ของข้อมูล" title="หมวดหมู่ข้อมูล" type="text" value={formData.data_subject_category} onChange={(e) => setFormData({ ...formData, data_subject: e.target.value })} className="w-full px-2 py-1.5 border border-slate-300 rounded focus:ring-1 focus:ring-blue-500 outline-none text-black" placeholder="เช่น ลูกค้า, พนักงาน..." />
+                        <label htmlFor="data_subject" className="block font-bold text-slate-700 mb-1">{currentMenu === "Controller" ? "5" : "6"}. หมวดหมู่ของข้อมูล (Data Subject)</label>
+                        <input id="data_subject" aria-label="หมวดหมู่ของข้อมูล" title="หมวดหมู่ข้อมูล" type="text" value={formData.data_subject} onChange={(e) => setFormData({ ...formData, data_subject: e.target.value })} className="w-full px-2 py-1.5 border border-slate-300 rounded focus:ring-1 focus:ring-blue-500 outline-none text-black" placeholder="เช่น ลูกค้า, พนักงาน..." />
                         
                       </div>
                       <div>
