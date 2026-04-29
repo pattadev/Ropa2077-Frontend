@@ -52,7 +52,7 @@ export default function UserManagementPage() {
       setNavPerms({
         canSeeDashboard: ["executive","auditor","developer"].includes(r),
         canSeeDPO:       ["dpo","auditor","developer"].includes(r),
-        canSeeRopa:      ["data_owner","auditor","developer"].includes(r),
+        canSeeRopa:      ["data owner","auditor","developer"].includes(r),
         canSeeUsers:     ["admin","developer","auditor"].includes(r),
       });
       
@@ -76,7 +76,7 @@ export default function UserManagementPage() {
   const [userToDelete, setUserToDelete] = useState<any>(null);
 
   const [formData, setFormData] = useState({
-    name: "", email: "", password: "", phone: "", address: "", role: "data_owner", department: "HR"
+    name: "", email: "", password: "", phone: "", address: "", role: "Data Owner", department: "HR"
   });
 
   const getRoleBadge = (role: string) => {
@@ -195,7 +195,7 @@ export default function UserManagementPage() {
   
   const handleAddNewClick = () => {
     setEditingUser(null);
-    setFormData({ name: "", email: "", password: "", phone: "", address: "", role: "data_owner", department: "HR" });
+    setFormData({ name: "", email: "", password: "", phone: "", address: "", role: "Data Owner", department: "HR" });
     setIsModalOpen(true);
   };
 
