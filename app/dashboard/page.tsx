@@ -95,7 +95,7 @@ export default function DashboardPage() {
         setNavPerms({
           canSeeDashboard: ["executive","auditor","developer"].includes(r),
           canSeeDPO:       ["dpo","auditor","developer"].includes(r),
-          canSeeRopa:      ["data_owner","auditor","developer"].includes(r),
+          canSeeRopa:      ["data owner","auditor","developer"].includes(r),
           canSeeUsers:     ["admin","developer","auditor"].includes(r),
         });
 
