@@ -51,7 +51,7 @@ export default function LoginPage() {
                     case "dpo":
                         router.push("/dpo");
                         break;
-                    case "data_owner":
+                    case "data owner":
                         router.push("/ropa/controller");
                         break;
                     case "executive":
