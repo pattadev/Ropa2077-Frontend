@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { jwtDecode } from "jwt-decode";
-import { TokenPayload } from "@/login/page";
+import { TokenPayload } from "@/types/auth";
 
 const API_BASE_URL = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/users`;
 
