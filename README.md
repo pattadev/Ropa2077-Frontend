@@ -1,12 +1,20 @@
-# Ropa-Frontend
-First, run the development server:
-
-npm install 
-
-npm install apexcharts react-apexcharts
-
-npm run dev
+🛡️ RoPA 2077
 
 
-Open [http://localhost:3000](http://localhost:3000)
-First, run the development server:
+
+🛠 Tech Stack
+
+- Frontend	            Next.js, React 19, TypeScript, Tailwind CSS
+- Data Visualization	ApexCharts
+- Authentication        JWT (Stateless Auth)
+- Deployment	        Vercel (Frontend)
+
+🔐 Roles 
+Role                 Access                      Description
+
+AdminUser          Management                   จัดการบัญชีผู้ใช้งานและสิทธิ์ต่างๆ
+DPO                DPOApproval                  ตรวจสอบ, อนุมัติ หรือส่งคืนรายการ RoPA   
+DataOwner          Controller /Processor        สร้างและบริหารจัดการรายการประมวลผลของหน่วยงาน
+Auditor            View All                     ตรวจสอบข้อมูลได้ทุกส่วนในโหมด Read-only
+Executive          View Dashboard               ตรวจสอบสถิติ
+
