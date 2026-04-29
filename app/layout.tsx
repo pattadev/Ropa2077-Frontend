@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ROPA2077 BY MACHOPA ",
+  title: "ROPA2077 ",
   description: "ROPA2077 BY MACHOPA",
 };
 
