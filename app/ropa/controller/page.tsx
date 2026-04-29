@@ -210,7 +210,7 @@ export default function RoPARecordPage() {
 
           // 🔒 Route Guard: เฉพาะ role ที่อนุญาตเท่านั้นเข้าหน้านี้ได้
           const role = (decodedUser.role || "").toString();
-          const allowedRoles = ["data_owner", "auditor", "admin", "developer"];
+          const allowedRoles = ["data owner", "auditor", "admin", "developer"];
           const isAllowed = allowedRoles.some(r => role.toLowerCase() === r.toLowerCase());
           if (!isAllowed) {
             router.push("/login");
@@ -223,15 +223,15 @@ export default function RoPARecordPage() {
           const r = role.toLowerCase();
           const canSeeDashboard  = ["executive","auditor","developer"].includes(r);
           const canSeeDPO        = ["dpo","auditor","developer"].includes(r);
-          const canSeeRopa       = ["data_owner","auditor","developer"].includes(r);
+          const canSeeRopa       = ["data owner","auditor","developer"].includes(r);
           const canSeeUsers      = ["admin","developer","auditor"].includes(r);
           setNavPerms({ canSeeDashboard, canSeeDPO, canSeeRopa, canSeeUsers });
           setToken(storedToken);
-          
+
           setCurrentUser({
             name: decodedUser.name || decodedUser.sub || "User",
             email: decodedUser.email || "-",
-            role: decodedUser.role || "data_owner",
+            role: decodedUser.role || "data owner",
             phone: decodedUser.phone || "-",
             address: decodedUser.address || "-",
             department: decodedUser.department || decodedUser.dept || decodedUser.unit || ""
