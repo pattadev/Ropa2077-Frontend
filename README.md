@@ -10,14 +10,13 @@
 - Deployment	        Vercel (Frontend)
 
 🔐 Roles 
-Role          Access                Description
 
-AdminUser    Management             จัดการบัญชีผู้ใช้งานและสิทธิ์ต่างๆ
+AdminUser / Management / จัดการบัญชีผู้ใช้งานและสิทธิ์ต่างๆ
 
-DPO          DPOApproval            ตรวจสอบ, อนุมัติ หรือส่งคืนรายการ RoPA   
+DPO / DPOApproval / ตรวจสอบ, อนุมัติ หรือส่งคืนรายการ RoPA   
 
-DataOwner    Controller/Processor   สร้างและบริหารจัดการรายการประมวลผลของหน่วยงาน
+DataOwner / Controller/Processor / สร้างและบริหารจัดการรายการประมวลผลของหน่วยงาน
 
-Auditor      View All               ตรวจสอบข้อมูลได้ทุกส่วนในโหมด Read-only
+Auditor / View All / ตรวจสอบข้อมูลได้ทุกส่วนในโหมด Read-only
 
-Executive    View Dashboard         ตรวจสอบสถิติ
+Executive / View Dashboard / ตรวจสอบสถิติ
