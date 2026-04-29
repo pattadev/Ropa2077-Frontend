@@ -283,7 +283,7 @@ export default function RoPARecordPage() {
       formDataUpload.append("file", importFile);
 
       const safeBaseUrl = API_BASE_URL.endsWith('/') ? API_BASE_URL : `${API_BASE_URL}/`;
-      const res = await fetch(`${safeBaseUrl}processor/import`, {
+      const res = await fetch(`${safeBaseUrl}processor/import-ropa-file`, {
         method: "POST",
         headers: { "Authorization": `Bearer ${token}` },
         body: formDataUpload,
