@@ -5,10 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import type { ApexOptions } from "apexcharts";
-interface TokenPayload {
-  sub?: string;
-  role?: string;
-}
+import type { TokenPayload } from "@/types/auth";
 import { jwtDecode } from "jwt-decode";
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
