@@ -4,17 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { jwtDecode } from "jwt-decode"; // ใช้งาน jwtDecode
 
-// 🛠️ กำหนด Interface สำหรับ Payload ที่อยู่ใน JWT Token
-export interface TokenPayload {
-    sub: string;
-    role: string;
-    user_id: number;
-    email?: string;
-    phone_number?: string;
-    address?: string;
-    department?: string;
-    exp: number;
-}
+import type { TokenPayload } from "@/types/auth";
 
 export default function LoginPage() {
     const router = useRouter();
