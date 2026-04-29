@@ -168,6 +168,7 @@ export default function DpoApprovalPage() {
   const [tasks, setTasks] = useState<RopaData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentUser, setCurrentUser] = useState<any>({ name: "", role: "" });
+  const [isAuditor, setIsAuditor] = useState(false);
   // Filters & Sorting
   const [filters, setFilters] = useState({
     id: "",
@@ -255,6 +256,8 @@ export default function DpoApprovalPage() {
           name: decoded.sub || "Unknown User",
           role: decoded.role || "No Role",
         });
+
+        setIsAuditor(role.toLowerCase() === "auditor");
 
         // 🔒 Sidebar visibility per role
         const r = (decoded.role || "").toLowerCase();
@@ -1680,7 +1683,7 @@ export default function DpoApprovalPage() {
                 rows={2}
                 value={dpoRemark}
                 onChange={(e) => setDpoRemark(e.target.value)}
-                disabled={selectedRecord.status === "Approved"}
+                disabled={selectedRecord.status === "Approved" || isAuditor}
                 className="w-full px-3 py-2 text-xs border border-slate-300 rounded focus:ring-2 focus:ring-blue-500 outline-none resize-none mb-3 disabled:bg-slate-200 text-black "
                 placeholder="ระบุความเห็น ข้อเสนอแนะ หรือเหตุผลที่ตีกลับเอกสาร..."
               />
@@ -1694,7 +1697,7 @@ export default function DpoApprovalPage() {
                   ปิดหน้าต่าง
                 </button>
 
-                {selectedRecord.status !== "Approved" && (
+                {selectedRecord.status !== "Approved" && !isAuditor && (
                   <>
                     <button
                       aria-label="ตีกลับรายการ"
