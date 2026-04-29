@@ -1257,7 +1257,8 @@ export default function RoPARecordPage() {
                       </div>
                       <div>
                         <label htmlFor="data_subject_category" className="block font-bold text-slate-700 mb-1">{currentMenu === "Controller" ? "5" : "6"}. หมวดหมู่ของข้อมูล (Data Subject)</label>
-                        <input id="data_subject_category" aria-label="หมวดหมู่ของข้อมูล" title="หมวดหมู่ข้อมูล" type="text" value={formData.data_subject_category} onChange={(e) => setFormData({ ...formData, data_subject_category: e.target.value })} className="w-full px-2 py-1.5 border border-slate-300 rounded focus:ring-1 focus:ring-blue-500 outline-none text-black" placeholder="เช่น ลูกค้า, พนักงาน..." />
+                        <input id="data_subject_category" aria-label="หมวดหมู่ของข้อมูล" title="หมวดหมู่ข้อมูล" type="text" value={formData.data_subject_category} onChange={(e) => setFormData({ ...formData, data_subject: e.target.value })} className="w-full px-2 py-1.5 border border-slate-300 rounded focus:ring-1 focus:ring-blue-500 outline-none text-black" placeholder="เช่น ลูกค้า, พนักงาน..." />
+                        
                       </div>
                       <div>
                         <label htmlFor="data_type" className="block font-bold text-slate-700 mb-1">{currentMenu === "Controller" ? "6" : "7"}. ประเภทของข้อมูล</label>
