@@ -1,4 +1,4 @@
-🛡️ RoPA 2077
+🛡️ RoPA 2077 (https://ropa2077-frontend.vercel.app/)
 
 
 
