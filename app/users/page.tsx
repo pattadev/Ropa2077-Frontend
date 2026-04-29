@@ -76,7 +76,7 @@ export default function UserManagementPage() {
   const [userToDelete, setUserToDelete] = useState<any>(null);
 
   const [formData, setFormData] = useState({
-    name: "", email: "", password: "", phone: "", address: "", role: "Data Owner", department: "HR"
+    name: "", email: "", password: "", phone: "", address: "", role: "data_owner", department: "HR"
   });
 
   const getRoleBadge = (role: string) => {
@@ -195,7 +195,7 @@ export default function UserManagementPage() {
   
   const handleAddNewClick = () => {
     setEditingUser(null);
-    setFormData({ name: "", email: "", password: "", phone: "", address: "", role: "Data Owner", department: "HR" });
+    setFormData({ name: "", email: "", password: "", phone: "", address: "", role: "data_owner", department: "HR" });
     setIsModalOpen(true);
   };
 
