@@ -152,7 +152,7 @@ export default function RoPARecordPage() {
   const [isRopaMenuOpen, setIsRopaMenuOpen] = useState(true);
 
   // Page States
-  const currentMenu = "Processor";
+  const currentMenu = "Processor" as "Controller" | "Processor";
   const [currentTab, setCurrentTab] = useState("Activities");
 
   // Modal States
