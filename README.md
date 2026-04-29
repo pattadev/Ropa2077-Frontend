@@ -1,15 +1,16 @@
-🛡️ RoPA 2077 (https://ropa2077-frontend.vercel.app/)
+RoPA 2077 (https://ropa2077-frontend.vercel.app/)
+CN334 Mini Hackathon 2026RoPA Hackathon by Netbay
 
 
 
-🛠 Tech Stack
+Tech Stack
 
-- Frontend	            Next.js, React 19, TypeScript, Tailwind CSS
+- Frontend	            Next.js, React, TypeScript, Tailwind CSS
 - Data Visualization	ApexCharts
 - Authentication        JWT (Stateless Auth)
 - Deployment	        Vercel (Frontend)
 
-🔐 Roles 
+Roles 
 
 AdminUser / Management / จัดการบัญชีผู้ใช้งานและสิทธิ์ต่างๆ
 
