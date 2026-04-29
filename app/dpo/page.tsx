@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { jwtDecode } from "jwt-decode";
-import { TokenPayload } from "../login/page";
+import type { TokenPayload } from "@/types/auth";
 
 // ==========================================
 // TypeScript Interfaces
