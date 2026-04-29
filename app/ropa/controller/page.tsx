@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { jwtDecode } from "jwt-decode";
-import process from "process";
 
 // ==========================================
 // TypeScript Interfaces
@@ -63,7 +62,7 @@ export interface RopaData {
   [key: string]: any; 
 }
 
-const API_BASE_URL = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/ropa/controller`;
+const API_BASE_URL = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/ropa`;
 
 // ==========================================
 // Helper Functions: จัดการวันที่ พ.ศ.
