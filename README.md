@@ -2,8 +2,8 @@ RoPA 2077 (https://ropa2077-frontend.vercel.app/)
 CN334 Mini Hackathon 2026RoPA Hackathon by Netbay
 
 LOGIN FOR อ.อาร์ท
-email: [ชื่อจริงอาจารย์ภาษาอังกฤษ]@gmail.com
-password: ajarnart
+- email: [ชื่อจริงอาจารย์ภาษาอังกฤษ]@gmail.com
+- password: ajarnart
 
 Tech Stack
 
