@@ -463,10 +463,10 @@ export default function UserManagementPage() {
                         <select aria-label="กรองด้วยบทบาท" title="Filter by Role" value={filters.role} onChange={(e) => handleFilterChange('role', e.target.value)} onClick={(e) => e.stopPropagation()} className="w-full text-[10px] px-1 py-1 border border-slate-300 rounded outline-none focus:border-blue-500 bg-white cursor-pointer">
                           <option value="">ทั้งหมด</option>
                           <option value="Admin">Admin</option>
-                          <option value="DPO">dpo</option>
+                          <option value="dpo">dpo</option>
                           <option value="Data Owner">data owner</option>
-                          <option value="Auditor">auditor</option>
-                          <option value="Executive">executive</option>
+                          <option value="auditor">auditor</option>
+                          <option value="executive">executive</option>
                         </select>
                       </th>
                       <th className="w-[14.28%] px-2 py-2.5 align-top overflow-hidden">
